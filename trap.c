@@ -43,25 +43,25 @@ void trap_enter(struct trap_regs *regs) {
     printl("pc:    %08X" NEWLINE, regs->reg[15]);
     printl("cpsr:  %08X" NEWLINE, regs->psr);
     switch (regs->psr & 0x1F) {
-        case 0b10000:
+        case 0x10:
             mode = "usr";
             break;
-        case 0b10001:
+        case 0x11:
             mode = "fiq";
             break;
-        case 0b10010:
+        case 0x12:
             mode = "irq";
             break;
-        case 0b10011:
+        case 0x13:
             mode = "svc";
             break;
-        case 0b10111:
+        case 0x17:
             mode = "abt";
             break;
-        case 0b11011:
+        case 0x1b:
             mode = "und";
             break;
-        case 0b11111:
+        case 0x1f:
             mode = "sys";
             break;
         default:

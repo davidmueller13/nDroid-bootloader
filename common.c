@@ -66,7 +66,7 @@ void peek(char *arg) {
     addr = strtoul(arg, &endptr, 16);
 
     if ( endptr != arg ) {
-        if (addr & 0b11) {
+        if (addr & 0x3) {
             printl("Warning: Address 0x%x is not word-aligned" NEWLINE, addr);
         } else {
             printl("*0x%x = 0x%x" NEWLINE, addr, *(io32_t)addr);
@@ -87,7 +87,7 @@ void poke(char *arg) {
     value = strtoul(nextarg, &endptr, 16);
 
     if ( endptr != nextarg ) {
-        if (!(addr & 0b11)) {
+        if (!(addr & 0x3)) {
             *(io32_t)addr = value;
         }
     } else {
