@@ -21,6 +21,7 @@ Copy ```linuxloader.tns``` to your calculator and run it.
 
 Valid commands are:
 
+ * ```aboot <filename>```: Loads an Android boot.img into memory
  * ```kernel <filename>```: Loads a kernel image into memory
  * ```initrd <filename>```: Loads a ramdisk into memory
  * ```dtb <filename>```: Loads a DTB image into memory
