@@ -1,6 +1,6 @@
-# TI-NSPIRE Linux In-Place Bootloader V2
+# nDroid Android Bootloader
 
-In-place boot a Linux kernel from inside the Nspire operating system.
+Modified TI-NSPIRE Linux bootloader designed to load Android boot images.
 
 ## Improvements over old one
 
