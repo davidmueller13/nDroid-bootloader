@@ -87,6 +87,8 @@ void setget_mach(char *arg);
 void setget_phys(char *arg);
 void setget_rdisksize(char *arg);
 
+size_t file_size(const char *filename);
+
 void poke(char *arg);
 void peek(char *arg);
 

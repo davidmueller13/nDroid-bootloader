@@ -22,7 +22,7 @@
 #include "common.h"
 #include "memory.h"
 
-static size_t file_size(const char *filename) {
+size_t file_size(const char *filename) {
     struct stat stats;
     if (stat(filename, &stats)) return 0;
     return stats.st_size;

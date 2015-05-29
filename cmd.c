@@ -21,6 +21,7 @@
 #include "kernel.h"
 #include "common.h"
 #include "load.h"
+#include "bootimg.h"
 #include "mach.h"
 #include "memory.h"
 #include "cmd.h"
@@ -74,6 +75,7 @@ int process_cmd(char *cmd) {
     DEFINE_COMMAND(poke, poke);
     DEFINE_COMMAND(peek, peek);
     DEFINE_COMMAND(enterbkpt, break_on_entry);
+    DEFINE_COMMAND(aboot, load_bootimg);
     /*
         End command list. Do not add any more after here
     */
