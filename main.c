@@ -42,9 +42,18 @@ int main(int argc, char *argv[]) {
     nio_set_default(&csl);
     trap_install();
 
-    printl("Linux in-place bootloader v2" GIT_TEXT NEWLINE);
+    printl("nDroid Bootloader" GIT_TEXT NEWLINE);
 #ifdef BUILD_DATE
     printl("Build date: " BUILD_DATE NEWLINE);
+#endif
+#ifndef NO_UGLY_LOGO
+    printl(" \\ __ / " NEWLINE
+           " /^  ^\\ (Yay!)" NEWLINE
+           "||    ||" NEWLINE
+           "||    ||" NEWLINE
+           "**----**" NEWLINE
+           " ||  || " NEWLINE
+           " --  -- " NEWLINE);
 #endif
 
     alloc_memory();
