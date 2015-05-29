@@ -76,7 +76,7 @@ void load_bootimg(const char *filename) {
 
     n = ROUND_TO_PAGE(hdr->ramdisk_size);
 
-    printl("Loading boot image ramdisk...");
+    printl("Loading boot image ramdisk... ");
 
     /* Set initrd load address location */
     void *initrd_laddr = ((char*) settings.mem_block.start + settings.mem_block.size - n);
